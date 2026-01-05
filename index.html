@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Ladies Shooting Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* Background image with transparency */
+            main.container {
+            background-image: url('girlshot2.jpg'); /* Change to your actual image path */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: rgba(255, 233, 236, 0.5); /* Rose Ivory with transparency */
+            background-blend-mode: overlay;
+            position: relative;
+         }
+
+         /* Ensure content sections remain opaque */
+            .content-section, 
+            .mission-vision-goals div,
+            .category-card,
+            .facility-card,
+            .pricing-card,
+            .contact-info,
+            .contact-hours,
+            .terms-conditions {
+            background-color: white;
+         }
+          
+         /* For all page sections */
+            .page-section {
+             background-image: url('girlshot2.jpg');
+             background-size: cover;
+             background-position: center;
+             background-attachment: fixed;
+             background-color: rgba(255, 233, 236, 0.5);
+             background-blend-mode: overlay;
+             position: relative;
+          }
+
+             .page-section::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: rgba(255, 233, 236, 0.5); /* 50% transparency */
+              z-index: -1;
+           }
+    
+          /* Rirst reset */
+          * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+           }
+
+           html, body {
+              width: 100%;
+              height: 100%;
+              margin: 0;
+              padding: 0;
+            }
+
+            body {
+               font-family: Arial, sans-serif;
+               color: #333;
+               line-height: 1.6;
+               /* Full screen background image */
+               background-image: 
+                   linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                   url('girlshot2.jpg');
+               background-repeat: no-repeat;
+               background-position: center center;
+               background-attachment: fixed;
+               background-size: cover;
+               background-color: transparent; /* Ensure no other color */
+               padding-top: 70px;
+               min-height: 100vh;
+             }
+        /* Header and Navigation */
+        header {
+            background-color: #66021F; /* Ruby */
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            background: none; /* Add this line */
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: block;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+/* Header content container */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Website name on right side */
+.website-name-right {
+    color: white;
+    font-size: 1.3rem; /* Font size 1.3rem */
+    font-weight: bold;
+    order: 2; /* Makes it appear on the right */
+    margin-left: auto; /* Pushes to right */
+    padding-left: 20px; /* Space from navigation */
+}
+
+/* Navigation on right - keep existing nav styles but align right */
+nav {
+    margin-left: 0;
+    margin-right: auto; /* Pushes nav to left, website name to right */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* CHANGE THIS */
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 5px; /* Reduce spacing between items */
+}
+
+        /* Page Sections */
+        .page-section {
+            display: none;
+            padding: 2rem 0;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Common Section Styles */
+        .page-title {
+            text-align: center;
+            color: #66021F;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #66021F;
+        }
+
+        .content-section {
+           padding: 2rem;
+           border-radius: 8px;
+           box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+           margin-bottom: 2rem;
+           background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+         }
+
+        .section-title {
+            color: #66021F;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #FFE9EC;
+        }
+
+        /* About Page Specific */
+        .mission-vision-goals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+       .mission-vision-goals div {
+          background-color: #FFF5F6; /* Change to rgba(255, 255, 255, 0.8) */
+          padding: 1.5rem;
+          border-radius: 8px;
+          border-left: 4px solid #66021F;
+        }
+
+        .mission-vision-goals h3 {
+            color: #66021F;
+            margin-bottom: 1rem;
+        }
+
+        .mission-vision-goals ul {
+            padding-left: 1.5rem;
+        }
+
+        /* Shooting Page Specific */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .category-card {
+            background-color: #FFF5F6; /* Change to rgba(255, 255, 255, 0.8) */
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+         }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-card h3 {
+            color: #66021F;
+            margin-bottom: 1rem;
+        }
+
+        /* Add this to your CSS for better image styling */
+        .category-card img {
+            transition: transform 0.3s ease;
+        }   
+
+        .category-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Fallback styling if images don't load */
+        .category-image::before {
+            color: #666;
+            font-style: italic;
+            position: absolute;
+        }
+
+        .category-card img[src] + .category-image::before {
+           display: none;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            background-color: #f8f8f8;
+            height: 150px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #ccc;
+            color: #666;
+            font-style: italic;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Facilities Page Specific */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .facility-card {
+            background-color: #FFF5F6;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .facility-image {
+            height: 180px;
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            border-bottom: 2px solid #FFE9EC;
+        }
+
+        .facility-info {
+            padding: 1.5rem;
+        }
+
+        .facility-info h3 {
+            color: #66021F;
+            margin-bottom: 0.5rem;
+            align-items: center;
+        }
+
+        /* Join Us Page Specific */
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            background-color: #FFF5F6;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #66021F;
+            margin: 1rem 0;
+        }
+
+        .terms-conditions {
+            background-color: #FFF0F2;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .terms-conditions ul, .terms-conditions ol {
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        /* Contact Page Specific */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background-color: #FFF5F6;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .contact-info h3 {
+            color: #66021F;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-item i {
+            color: #66021F;
+            margin-right: 10px;
+            min-width: 20px;
+        }
+
+        .contact-hours {
+            background-color: #FFF5F6;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+/* Add this to your existing CSS */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.contact-info, .contact-hours {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: #FFF5F6;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Make sure both boxes have equal height */
+.contact-info, .contact-hours {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Adjust social media links */
+.contact-info .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.contact-info .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #66021F;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+
+.contact-info .social-link:hover {
+    background-color: #4A0017;
+}
+
+/* Google Maps link styling */
+.contact-hours a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-hours a:hover {
+    color: #66021F;
+}
+
+/* Add this to your CSS for better contact section styling */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.contact-item i {
+    color: #66021F;
+    margin-right: 10px;
+    min-width: 20px;
+    margin-top: 4px;
+}
+
+.contact-item h3 {
+    color: #66021F;
+    margin-bottom: 0.5rem;
+}
+
+/* Center social media icons in circles */
+.social-media-item a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.social-media-item i {
+    margin: 0 !important;
+}
+
+/* Ensure all text is properly aligned */
+.contact-item > div {
+    flex: 1;
+}
+
+/* Make sure social media container items are centered */
+.social-media-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    justify-content: flex-start;
+}
+
+.social-media-item {
+    text-align: center;
+    width: 80px;
+}
+
+.social-media-item p {
+    font-size: 0.8rem;
+    color: #66021F;
+    margin-top: 5px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+        .social-link {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #66021F;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: #4A0017;
+        }
+
+        /* Calendar Styles */
+        .calendar-placeholder {
+            background-color: #FFF5F6;
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
+            color: #666;
+            margin-top: 1rem;
+        }
+
+        /* New Calendar Table Styles */
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+         }
+
+         .calendar-table th {
+            background-color: #66021F;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: bold;
+         }
+
+         .calendar-table th {
+            padding: 1rem;
+            border-bottom: 1px solid #FFE9EC;
+            vertical-align: top;
+          }
+
+          .calendar-table tr: last-child td {
+              border-bottom: none;
+          }
+
+          .calendar-table:hover {
+              background-color: #FFE9EC;
+          }
+
+          .calendar-period {
+              font-weight: bold;
+              color: #66021F;
+              width: 30%;
+          }
+
+          .calendar-activity {
+              width: 70%;
+          }
+
+          .calendar-table {
+              border: 2px solid #66021F; /Outer border */
+          }
+
+          .calendar-table td {
+              border: 1px solid #FFE9EC; /* Cell borders */
+          }
+
+          .calendar-table th {
+             border-right: 1px solid rgba(255,255,255,0.2); /*Header column separator */
+          }
+
+          .calendar-activity {
+             text-align: center; /* Center activity text */
+             vertical-align: middle; /*Vertically center */
+           }
+
+           .calendar-period {
+              text-align: center; /* Also centered period text */
+              vertical-align: middle; /* Vertically center */
+           }
+
+           .calendar-table th {
+              text-align: center; /* Center header text */
+           }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 120px; /* More space for header on mobile */
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            nav ul li a {
+                padding: 12px;
+            }
+            
+            .content-section {
+                padding: 1.5rem;
+            }
+            
+            .page-title {
+                font-size: 1.8rem;
+            }
+        }
+
+       /* Add this to your existing CSS in the footer section */
+footer {
+    background-color: #66021F;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer .social-link {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+footer .social-link:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Responsive design for footer */
+@media (max-width: 768px) {
+    footer .social-links {
+        gap: 0.8rem;
+    }
+    
+    footer .social-link {
+        width: 36px !important;
+        height: 36px !important;
+    }
+    
+    footer p {
+        font-size: 0.85rem !important;
+    }
+}
+
+/* Responsive design for footer */
+@media (max-width: 768px) {
+    footer .social-links {
+        gap: 1rem;
+    }
+    
+    footer .social-link {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    footer p {
+        font-size: 0.9rem !important;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+    <div class="container">
+        <div class="header-content">
+            <!-- Website name on right -->
+            <div class="website-name-right">
+                ELITE LADIES SHOOTING CLUB
+            </div>
+            
+            <!-- Navigation on right -->
+            <nav>
+                <ul>
+                    <li><a class="nav-link active" data-section="about"><i class="fas fa-home"></i> About Us</a></li>
+                    <li><a class="nav-link" data-section="shooting"><i class="fas fa-crosshairs"></i> Shooting</a></li>
+                    <li><a class="nav-link" data-section="facilities"><i class="fas fa-swimming-pool"></i> Facilities</a></li>
+                    <li><a class="nav-link" data-section="joinus"><i class="fas fa-user-plus"></i> Join Us</a></li>
+                    <li><a class="nav-link" data-section="contact"><i class="fas fa-address-book"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="container">
+        <!-- About Us Section -->
+        <section id="about" class="page-section active">
+            <h1 class="page-title">About Elite Ladies Shooting Club</h1>
+            
+                <div class="content-section">
+                <!-- Title moved to right side -->
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+                    <!-- LEFT SIDE: Image Slider -->
+                    <div style="flex: 1; min-width: 250px; max-width: 400px;">
+                        <!-- Empty space where title would be on left -->
+                        <div style="height: 40px; margin-bottom: 1rem;"></div>
+                        
+                        <div class="image-slider" style="position: relative; overflow: hidden; border-radius: 8px; background-color: #f8f8f8; height: 300px;">
+                            <!-- Slider Container -->
+                            <div class="slider-container" style="display: flex; transition: transform 0.5s ease; height: 100%;">
+                                <!-- Slide 1 -->
+                                <div class="slide" style="min-width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                                    <img src="girlshot1.jpg" alt="Club Facility" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                
+                                <!-- Slide 2 -->
+                                <div class="slide" style="min-width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                                    <img src="girlshot3.jpg" alt="Training Session" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                            </div>
+                            
+                            <!-- Navigation Buttons -->
+                            <button class="slider-btn prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(102, 2, 31, 0.8); color: white; border: none; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; font-size: 1rem; z-index: 10;">
+                                &#10094;
+                            </button>
+                            
+                            <button class="slider-btn next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(102, 2, 31, 0.8); color: white; border: none; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; font-size: 1rem; z-index: 10;">
+                                &#10095;
+                            </button>
+                            
+                            <!-- Dots Indicator -->
+                            <div style="position: absolute; bottom: 10px; left: 0; right: 0; display: flex; justify-content: center; gap: 8px; z-index: 10;">
+                                <span class="dot active" style="width: 10px; height: 10px; background-color: rgba(102, 2, 31, 0.8); border-radius: 50%; cursor: pointer; transition: background-color 0.3s;"></span>
+                                <span class="dot" style="width: 10px; height: 10px; background-color: rgba(255, 255, 255, 0.5); border-radius: 50%; cursor: pointer; transition: background-color 0.3s;"></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Manual navigation buttons below slider -->
+                        <div style="display: flex; justify-content: center; gap: 0.8rem; margin-top: 0.8rem; flex-wrap: wrap;">
+                            <button class="manual-btn active" data-slide="0" style="padding: 6px 12px; background-color: #66021F; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.9rem;">Shooting Range</button>
+                            <button class="manual-btn" data-slide="1" style="padding: 6px 12px; background-color: #66021F; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.9rem;">Training Session</button>
+                        </div>
+                    </div>
+                    
+                    <!-- RIGHT SIDE: Title and Text -->
+                    <div style="flex: 2; min-width: 300px;">
+                        <h2 class="section-title" style="margin-top: 0;">Introduction</h2>
+                        
+                        <div class="justified-text">
+                        <p>Elite Ladies Shooting Club is a dedicated shooting club established exclusively for women, located in Alor Setar, Kedah, Malaysia. The club provides a safe, comfortable, and professional environment for women aged 18 and above who are interested in learning and developing shooting skills under proper supervision and discipline.</p>
+                        
+                        <p style="margin-top: 1rem;">In addition to women-only shooting classes, Elite Ladies Shooting Club also offers a variety of sports and recreational facilities that are open to all genders and age groups, from children to adults. Our facilities include a swimming pool, indoor badminton court, and archery activities, catering to individuals, families, and the wider community.</p>
+                        
+                        <p style="margin-top: 1rem;">To participate in shooting classes or to use any of our facilities, participants are required to complete a registration form via Google Form. All registration forms can be accessed directly through our official website.</p>
+                        
+                        <p style="margin-top: 1rem;">Elite Ladies Shooting Club is committed to promoting an active lifestyle, confidence, and discipline, while empowering women through high-quality sports and recreational experiences.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title">Calendar</h2>
+                <p>Our club follows a structured annual program designed to maximize skill development and member engagement. Below is our activity schedule for the year:</p>
+                
+                <table class="calendar-table">
+                   <thead>
+                       <tr>
+                            <th>Period</th>
+                            <th>Activity</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="calendar-period" data-label="Period">January</td>
+                            <td class="calendar-activity" data-label="Activity">Membership registration and annual planning</td>
+                        </tr>
+                        <tr>
+                            <td class="calendar-period" data-label="Period">February - March</td>
+                            <td class="calendar-activity" data-label="Activity">Basic and advanced shooting training sessions</td>
+                        </tr>
+                        <tr>
+                            <td class="calendar-period" data-label="Period">April</td>
+                            <td class="calendar-activity" data-label="Activity">Safety and shooting techniques workshop</td>
+                        </tr>
+                        <tr>
+                            <td class="calendar-period" data-label="Period">June</td>
+                            <td class="calendar-activity" data-label="Activity">Internal shooting competition</td>
+                        </tr>
+                        <tr>
+                            <td class="calendar-period" data-label="Period">August</td>
+                            <td class="calendar-activity" data-label="Activity">Skill enhancement and coaching clinic</td>
+                        </tr>
+                        <tr>
+                            <td class="calendar-period" data-label="Period">October</td>
+                            <td class="calendar-activity" data-label="Activity">Participation in external competitions or friendly matches</td>
+                        </tr>
+                        <tr>
+                            <td class="calendar-period" data-label="Period">December</td>
+                            <td class="calendar-activity" data-label="Activity">Annual evaluation and closing program</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="margin-top: 1.5rem; padding: 1rem; background: #FFF5F6; border-radius: 6px; border-left: 4px solid #66021F;">
+                    <p style="margin: 0; font-style: italic; color: #66021F;">
+                        <i class="fas fa-info-circle" style="margin-right: 8px;"></i>
+                        <strong>Note:</strong> This calendar represents our standard annual program. Specific dates and additional events will be announced on our website and social media channels.
+                    </p>
+                </div>
+           </div>
+
+            <div class="content-section">
+                <h2 class="section-title">Our Vision, Mission & Goals</h2>
+                
+                <div class="mission-vision-goals">
+                    <div>
+                        <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                        <p>To be a recognized women's shooting organization that nurtures skilled, confident, and competitive female shooters.</p>
+                    </div>
+                    
+                    <div>
+                        <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                        <ul>
+                            <li>To provide systematic training and coaching for women in shooting sports</li>
+                            <li>To promote safe and responsible firearm handling practices</li>
+                            <li>To encourage women's participation in shooting competitions</li>
+                            <li>To develop discipline, focus, and confidence through shooting activities</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3><i class="fas fa-flag-checkered"></i> Our Goals</h3>
+                        <ul>
+                            <li>To identify and develop potential female shooters</li>
+                            <li>To enhance technical skills through regular training programs</li>
+                            <li>To prepare members for competitive shooting events</li>
+                            <li>To promote teamwork, sportsmanship, and professionalism</li>
+                            <li>To support women's empowerment through sports participation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shooting Section -->
+<section id="shooting" class="page-section">
+    <h1 class="page-title">Shooting Activities</h1>
+    
+    <div class="content-section">
+        <h2 class="section-title">Shooting Categories</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <div class="category-image" style="height: 200px; background-color: #f8f8f8; border-radius: 8px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <img src="shortgun1.jpg" alt="Shotgun Shooting Range" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>Shotgun Shooting Range</h3>
+                <p>Experience the thrill of shotgun shooting with our certified instructors. Perfect for beginners and experienced shooters alike.</p>
+                <p><strong>Available:</strong> Saturday to Thursday</p>
+            </div>
+            
+            <div class="category-card">
+                <div class="category-image" style="height: 200px; background-color: #f8f8f8; border-radius: 8px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <img src="10meters.jpg" alt="10 Meter Shooting Range" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>10 Meter Shooting Range</h3>
+                <p>Our indoor 10m range is ideal for precision shooting practice. Air pistols and rifles available for training and competitions.</p>
+                <p><strong>Available:</strong> Saturday to Thursday</p>
+            </div>
+            
+            <div class="category-card">
+                <div class="category-image" style="height: 200px; background-color: #f8f8f8; border-radius: 8px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <img src="25meter.jpg" alt="25 Meter Shooting Range" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>25 Meter Shooting Range</h3>
+                <p>For more advanced shooting practice, our 25m range accommodates various firearm types under strict safety protocols.</p>
+                <p><strong>Available:</strong> Saturday to Thursday</p>
+            </div>
+        </div>
+    </div>
+            <div class="content-section">
+                <h2 class="section-title">Latest News</h2>
+                <div class="news-item">
+                    <h3>New Shooting Class Registration Now Open!</h3>
+                    <p><strong>Date:</strong> January 10, 2026</p>
+                    <p>We're excited to announce that registration for our new beginner shooting classes is now open! Classes start January 17st and will run every Saturday morning for 8 weeks. Spaces are limited to ensure personalized attention from our certified instructors.</p>
+                    <p>Registration fee includes safety equipment, range fees, and ammunition for the course. Special discount available for students and early registration before January 10th.</p>
+                    <p><a href="https://forms.gle/hsMH2WvDiDGzWbMn9" class="social-link" onclick="showSection('joinus')">Register Now</a></p>
+                </div>
+                
+                <div class="news-item" style="margin-top: 2rem;">
+                    <h3>Upcoming Shooting Friendly Matches</h3>
+                    <p><strong>Date:</strong> October 20, 2026</p>
+                    <p>Elite Ladies Shooting Club will host its annual Women's Shooting Championship on October 20th. Categories include pistol, rifle, and shotgun events. This is a great opportunity for members to showcase their skills and compete with other shooting enthusiasts.</p>
+                    <p>Registration deadline: September 20th. Please visit our office or contact us for more details.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title">Gallery</h2>
+                
+                <div class="gallery-grid">
+                    <div class="gallery1.jpg">
+                    <img src="gallery1.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery2.jpg">
+                    <img src="gallery2.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery3.jpg">
+                    <img src="gallery3.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery4.jpg">
+                    <img src="gallery4.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery5.jpg">
+                    <img src="gallery5.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery6.jpg">
+                    <img src="gallery6.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery7.jpg">
+                    <img src="gallery7.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery8.jpg">
+                    <img src="gallery8.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery9.jpg">
+                    <img src="gallery9.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery10.jpg">
+                    <img src="gallery10.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery11.jpg">
+                    <img src="gallery11.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery12.jpg">
+                    <img src="gallery12.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section id="facilities" class="page-section">
+            <h1 class="page-title">Our Facilities</h1>
+            
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="facility-image">
+                    <img src="swimmingpool.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="facility-info">
+                        <h3>Swimming Pool</h3>
+                        <p>Our swimming pool is perfect for recreational swimming, training, and family fun. Open for lap swimming and a shallow area for children.</p>
+                        <p><strong>Operating Hours:</strong> 10:00 AM - 11:00 PM (Saturday - Thursday)</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-image">
+                    <img src="pickleball.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="facility-info">
+                        <h3>Pickleball Courts</h3>
+                        <p>Two professional pickleball courts available for members and guests. Equipment rental available for beginners. Join our weekly pickleball social events!</p>
+                        <p><strong>Operating Hours:</strong> 10:00 AM - 11:00 PM (Saturday - Thursday)</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-image">
+                    <img src="badminton.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="facility-info">
+                        <h3>Indoor Badminton</h3>
+                        <p>Four professional-grade badminton courts with proper lighting and flooring. Contact to booking. Regular tournaments organized monthly.</p>
+                        <p><strong>Operating Hours:</strong> 10:00 AM - 11:00 PM (Saturday - Thursday)</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-image">
+                    <img src="archery.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="facility-info">
+                        <h3>Archery Range</h3>
+                        <p>Experience the art of archery with our indoor and outdoor ranges. Suitable for all skill levels with instruction available from certified coaches. Equipment provided for beginners.</p>
+                        <p><strong>Operating Hours:</strong> 10:00 AM - 11:00 PM (Saturday - Thursday)</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-image">
+                    <img src="foodcourt.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="facility-info">
+                        <h3>Food Court</h3>
+                        <p>Our fully-equipped food court offers a variety of healthy meals, snacks, and beverages. Enjoy our comfortable seating area after your activities. Special dietary options available.</p>
+                        <p><strong>Operating Hours:</strong> 9:00 AM - 11:00 PM (Saturday - Thursday)</p>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">
+                    <img src="musalla.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                    <div class="facility-info">
+                        <h3>Musalla</h3>
+                        <p>A comfortable prayer room is provided for all visitors, complete with prayer mats and telekung for convenience. The facility is open 24 hours a day to ensure easy access at any time.</p>
+                        <p><strong>Operating Hours:</strong> 24 hours (Daily)</p>
+                    </div>
+                 </div>
+             </div>
+            
+            <div class="content-section" style="margin-top: 2rem;">
+                <h2 class="section-title">Facility Usage Notes</h2>
+                <ul style="padding-left: 1.5rem; margin-top: 1rem;">
+                    <li>All facilities are open to members and non-members (additional fees apply for non-members)</li>
+                    <li>Children under 12 must be accompanied by an adult at all times</li>
+                    <li>Advance booking is recommended for all facilities, especially during weekends</li>
+                    <li>Safety equipment must be worn where required (provided free of charge)</li>
+                    <li>All participants must sign a waiver before using any facilities</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Join Us Section -->
+        <section id="joinus" class="page-section">
+            <h1 class="page-title">Become a Member</h1>
+            
+            <div class="content-section">
+                <h2 class="section-title">Membership Pricing</h2>
+                <p>Join our exclusive community of women shooters and sports enthusiasts. Membership includes access to all shooting ranges and recreational facilities.</p>
+                
+                <div class="pricing-container">
+                    <div class="pricing-card">
+                        <h3>For Malaysians</h3>
+                        <div class="price">RM2,160</div>
+                        <p>Annual Membership Fee</p>
+                        <ul style="text-align: left; margin-top: 1.5rem;">
+                            <li>Unlimited access to shooting ranges</li>
+                            <li>Priority booking for all facilities</li>
+                            <li>Free beginner shooting course</li>
+                            <li>10% discount on equipment rental</li>
+                            <li>Free participation in monthly competitions</li>
+                            <li>Access to members-only events</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h3>For Foreigners</h3>
+                        <div class="price">RM3,240</div>
+                        <p>Annual Membership Fee</p>
+                        <ul style="text-align: left; margin-top: 1.5rem;">
+                            <li>Unlimited access to shooting ranges</li>
+                            <li>Priority booking for all facilities</li>
+                            <li>Free beginner shooting course</li>
+                            <li>10% discount on equipment rental</li>
+                            <li>Free participation in monthly competitions</li>
+                            <li>Access to members-only events</li>
+                            <li>Additional insurance coverage</li>
+                            <li>International shooting license assistance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section terms-conditions">
+                <h2 class="section-title">Terms & Conditions</h2>
+                <ol>
+                    <li>Age 18 Years Old & Above (For Malaysians & Foreigners)</li>
+                    <li>Not Blacklisted by Police</li>
+                    <li>All members must complete safety training before using shooting ranges</li>
+                    <li>Membership is non-transferable and valid for one year from registration date</li>
+                    <li>Members must comply with all club rules and safety regulations</li>
+                    <li>Membership fee is non-refundable</li>
+                    <li>The club reserves the right to revoke membership for violation of rules</li>
+                    <li>Foreign members must present valid passport and visa during registration</li>
+                </ol>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title">How to Register</h2>
+                <p>To join Elite Ladies Shooting Club, please follow these steps:</p>
+                <ol style="margin-top: 1rem; padding-left: 1.5rem;">
+                    <li>Complete the online registration form via Google Form (link available on our website)</li>
+                    <li>Visit our club office to submit required documents:
+                        <ul style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                            <li>Photocopy of IC (Malaysians) or Passport (Foreigners)</li>
+                            <li>Two passport-sized photographs</li>
+                            <li>Police verification document (will be arranged by the club)</li>
+                        </ul>
+                    </li>
+                    <li>Attend mandatory safety orientation session</li>
+                    <li>Make payment for annual membership fee</li>
+                    <li>Receive your membership card and start enjoying club facilities!</li>
+                </ol>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="https://forms.gle/mGU5nRjbpenY7MYS6" class="social-link" style="padding: 15px 30px; font-size: 1.2rem;">
+                        <i class="fab fa-google"></i> Access Registration Form
+                    </a>
+                </div>
+            </div>
+        </section>
+<!-- Contact Section -->
+<section id="contact" class="page-section">
+    <h1 class="page-title">Contact Us</h1>
+    
+    <div class="contact-container">
+        <div class="contact-info" style="flex: 1; min-width: 300px;">
+            <h2 class="section-title">Club Information</h2>
+            
+            <div class="contact-item" style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+                <i class="fas fa-map-marker-alt" style="color: #66021F; margin-right: 10px; min-width: 20px; margin-top: 4px;"></i>
+                <div>
+                    <h3 style="color: #66021F; margin-bottom: 0.5rem;">Address</h3>
+                    <p>Elite Ladies Shooting Club<br>
+                    No. 3, Jalan Stadium, Bandar Alor Setar<br>
+                    Kedah, Malaysia<br>
+                    Postal Code: 05100</p>
+                </div>
+            </div>
+            
+            <div class="contact-item" style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+                <i class="fas fa-phone" style="color: #66021F; margin-right: 10px; min-width: 20px; margin-top: 4px;"></i>
+                <div>
+                    <h3 style="color: #66021F; margin-bottom: 0.5rem;">Phone Number</h3>
+                    <p>+6019 540 3890 (Office)<br>
+                    +6011 5717 5948 (Administration)<br>
+                    +6011 1762 1801 (Emergency Contact)</p>
+                </div>
+            </div>
+            
+            <div class="contact-item" style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+                <i class="fas fa-envelope" style="color: #66021F; margin-right: 10px; min-width: 20px; margin-top: 4px;"></i>
+                <div>
+                    <h3 style="color: #66021F; margin-bottom: 0.5rem;">Email Address</h3>
+                    <p>eliteladies.shootingclub@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="contact-item" style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+                <i class="fas fa-share-alt" style="color: #66021F; margin-right: 10px; min-width: 20px; margin-top: 4px;"></i>
+                <div>
+                    <h3 style="color: #66021F; margin-bottom: 0.5rem;">Connect With Us</h3>
+                    <div class="social-media-container" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 10px; justify-content: flex-start;">
+                        <!-- Instagram -->
+                        <div class="social-media-item" style="text-align: center; width: 80px;">
+                            <a href="https://www.instagram.com/eliteladies.sc?igsh=bTZjenFyam9sdDcw" target="_blank" 
+                               style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 50%; background-color: #FFF5F6; border: 2px solid #66021F; text-decoration: none; transition: all 0.3s ease; margin: 0 auto 5px;">
+                                <i class="fab fa-instagram fa-lg" style="color: #66021F; margin: 0;"></i>
+                            </a>
+                            <p style="font-size: 0.8rem; color: #66021F; margin-top: 5px; font-weight: bold; line-height: 1.2;">Instagram</p>
+                        </div>
+                        
+                        <!-- TikTok -->
+                        <div class="social-media-item" style="text-align: center; width: 80px;">
+                            <a href="https://www.tiktok.com/@eliteladies.sc?_r=1&_t=ZS-92oLxQ32mPQ" target="_blank" 
+                               style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 50%; background-color: #FFF5F6; border: 2px solid #66021F; text-decoration: none; transition: all 0.3s ease; margin: 0 auto 5px;">
+                                <i class="fab fa-tiktok fa-lg" style="color: #66021F; margin: 0;"></i>
+                            </a>
+                            <p style="font-size: 0.8rem; color: #66021F; margin-top: 5px; font-weight: bold; line-height: 1.2;">TikTok</p>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="social-media-item" style="text-align: center; width: 80px;">
+                            <a href="mailto:eliteladies.shootingclub@gmail.com" 
+                               style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 50%; background-color: #FFF5F6; border: 2px solid #66021F; text-decoration: none; transition: all 0.3s ease; margin: 0 auto 5px;">
+                                <i class="fas fa-envelope fa-lg" style="color: #66021F; margin: 0;"></i>
+                            </a>
+                            <p style="font-size: 0.8rem; color: #66021F; margin-top: 5px; font-weight: bold; line-height: 1.2;">Email</p>
+                        </div>
+                        
+                        <!-- WhatsApp -->
+                        <div class="social-media-item" style="text-align: center; width: 80px;">
+                            <a href="https://wa.me/qr/5QIGMZ6UTMP7L1" target="_blank" 
+                               style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 50%; background-color: #FFF5F6; border: 2px solid #66021F; text-decoration: none; transition: all 0.3s ease; margin: 0 auto 5px;">
+                                <i class="fab fa-whatsapp fa-lg" style="color: #66021F; margin: 0;"></i>
+                            </a>
+                            <p style="font-size: 0.8rem; color: #66021F; margin-top: 5px; font-weight: bold; line-height: 1.2;">WhatsApp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-hours" style="flex: 1; min-width: 300px;">
+            <h2 class="section-title">Operating Hours</h2>
+            
+            <div class="contact-item" style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+                <i class="far fa-clock" style="color: #66021F; margin-right: 10px; min-width: 20px; margin-top: 4px;"></i>
+                <div>
+                    <h3 style="color: #66021F; margin-bottom: 0.5rem;">Office Hours</h3>
+                    <p>Saturday - Thursday: 9:00 AM - 5:00 PM<br>
+                    Friday: Closed</p>
+                </div>
+            </div>
+            
+            <div class="contact-item" style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+                <i class="fas fa-calendar-alt" style="color: #66021F; margin-right: 10px; min-width: 20px; margin-top: 4px;"></i>
+                <div>
+                    <h3 style="color: #66021F; margin-bottom: 0.5rem;">Facility Hours</h3>
+                    <p>All facilities are open:<br>
+                    10:00 AM - 11:00 PM daily</p>
+                </div>
+            </div>
+            
+            <div class="contact-item" style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+                <i class="fas fa-exclamation-circle" style="color: #66021F; margin-right: 10px; min-width: 20px; margin-top: 4px;"></i>
+                <div>
+                    <h3 style="color: #66021F; margin-bottom: 0.5rem;">Important Notes</h3>
+                    <ul style="padding-left: 1.2rem; margin: 0;">
+                        <li>Last entry to shooting ranges: 9:30 PM</li>
+                        <li>Booking required for all shooting activities</li>
+                        <li>Safety briefing mandatory for first-time visitors</li>
+                        <li>Closed on major public holidays</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="contact-item" style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+                <i class="fas fa-map" style="color: #66021F; margin-right: 10px; min-width: 20px; margin-top: 4px;"></i>
+                <div style="width: 100%;">
+                    <h3 style="color: #66021F; margin-bottom: 0.5rem;">Location Map</h3>
+                    <div style="background-color: #f8f8f8; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-top: 5px; overflow: hidden;">
+                        <a href="https://maps.app.goo.gl/bbhrZcEWAo5iB9996?g_st=ic" target="_blank" style="display: block; width: 100%; height: 100%; text-decoration: none; color: #66021F;">
+                            <div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1rem; text-align: center;">
+                                <i class="fas fa-map-marked-alt fa-3x" style="margin-bottom: 10px;"></i>
+                                <p style="font-weight: bold; margin: 5px 0;">View on Google Maps</p>
+                                <p style="font-size: 0.9rem; margin: 0;">Click to open location</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<footer>
+    <div class="container">
+        <!-- Social Media Logos - White Only -->
+        <div style="margin-bottom: 1.5rem;">
+            <div class="social-links" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/eliteladies.sc?igsh=bTZjenFyam9sdDcw" 
+                   target="_blank" 
+                   class="social-link" 
+                   style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; padding: 0; background-color: transparent; border: 2px solid white;">
+                    <i class="fab fa-instagram" style="color: white;"></i>
+                </a>
+                
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@eliteladies.sc?_r=1&_t=ZS-92oLxQ32mPQ" 
+                   target="_blank" 
+                   class="social-link" 
+                   style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; padding: 0; background-color: transparent; border: 2px solid white;">
+                    <i class="fab fa-tiktok" style="color: white;"></i>
+                </a>
+                
+                <!-- Email -->
+                <a href="mailto:eliteladies.shootingclub@gmail.com" 
+                   class="social-link" 
+                   style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; padding: 0; background-color: transparent; border: 2px solid white;">
+                    <i class="fas fa-envelope" style="color: white;"></i>
+                </a>
+                
+                <!-- WhatsApp -->
+                <a href="https://wa.me/qr/5QIGMZ6UTMP7L1" 
+                   target="_blank" 
+                   class="social-link" 
+                   style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; padding: 0; background-color: transparent; border: 2px solid white;">
+                    <i class="fab fa-whatsapp" style="color: white;"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Content from ss1.jpg - EXACT TEXT with adjusted font sizes -->
+        <div style="text-align: center; color: white; line-height: 1.6;">
+            <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
+                Elite Ladies Shooting Club © 2025. All Rights Reserved.
+            </p>
+            
+            <p style="margin-bottom: 0.8rem; font-size: 1rem;">
+                Empowering Women Through Precision Sports
+            </p>
+            
+            <p style="font-size: 0.85rem; opacity: 0.9;">
+                Stadium Alor Setar, Kedah | Malaysia
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all navigation links
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            // Add click event to each navigation link
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get the target section from data attribute
+                    const targetSection = this.getAttribute('data-section');
+                    
+                    // Show the target section
+                    showSection(targetSection);
+                });
+            });
+            
+            // Function to show a specific section
+            function showSection(sectionId) {
+                // Hide all sections
+                document.querySelectorAll('.page-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // Show the target section
+                document.getElementById(sectionId).classList.add('active');
+                
+                // Update active nav link
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-section') === sectionId) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Scroll to top of the page
+                window.scrollTo({top: 70, behavior: 'smooth'});
+            }
+            
+            // Check for hash in URL on page load
+            const hash = window.location.hash.substring(1);
+            if (hash && document.getElementById(hash)) {
+                showSection(hash);
+            }
+        });
+        // Image Slider Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliderContainer = document.querySelector('.slider-container');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.slider-btn.prev');
+            const nextBtn = document.querySelector('.slider-btn.next');
+            const dots = document.querySelectorAll('.dot');
+            const manualBtns = document.querySelectorAll('.manual-btn');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            // Function to update slider position
+            function updateSlider() {
+                if (sliderContainer) {
+                    sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+                }
+                
+                // Update active dot
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.style.backgroundColor = 'rgba(102, 2, 31, 0.8)';
+                        dot.classList.add('active');
+                    } else {
+                        dot.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+                        dot.classList.remove('active');
+                    }
+                });
+                
+                // Update manual buttons
+                manualBtns.forEach((btn, index) => {
+                    if (index === currentSlide) {
+                        btn.style.backgroundColor = '#4A0017'; // Darker shade
+                        btn.classList.add('active');
+                    } else {
+                        btn.style.backgroundColor = '#66021F'; // Original color
+                        btn.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Next slide
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            }
+            
+            // Go to specific slide
+            function goToSlide(index) {
+                currentSlide = index;
+                updateSlider();
+            }
+            
+            // Event Listeners
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+            
+            // Dot navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => goToSlide(index));
+            });
+            
+            // Manual button navigation
+            manualBtns.forEach((btn, index) => {
+                btn.addEventListener('click', () => goToSlide(index));
+            });
+            
+            // Auto slide every 5 seconds
+            let slideInterval = setInterval(nextSlide, 5000);
+            
+            // Pause auto-slide on hover
+            const slider = document.querySelector('.image-slider');
+            if (slider) {
+                slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
+                slider.addEventListener('mouseleave', () => {
+                    slideInterval = setInterval(nextSlide, 5000);
+                });
+            }
+            
+            // Initialize slider
+            updateSlider();
+        });
+    </script>
+</body>
+</html>
