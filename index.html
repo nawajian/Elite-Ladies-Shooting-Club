@@ -86,7 +86,7 @@
                padding-top: 70px;
                min-height: 100vh;
              }
-        /* Header and Navigation */
+             /* Header and Navigation */
         header {
             background-color: #66021F; /* Ruby */
             padding: 1rem 0;
@@ -206,7 +206,52 @@ nav ul li {
             padding-bottom: 0.5rem;
             border-bottom: 1px solid #FFE9EC;
         }
+/* Common Section Styles */
+.page-title {
+    text-align: center;
+    color: #66021F;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #66021F;
+}
 
+.section-title {
+    color: #66021F;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #FFE9EC;
+}
+
+/* Justify all text content */
+p, li, td, .justified-text, .content-section:not(.page-title),
+.contact-item p, .contact-item li, .facility-info p,
+.pricing-card p, .pricing-card li, .terms-conditions li,
+.news-item p, .category-card p, .mission-vision-goals p,
+.mission-vision-goals li {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Exclude titles from justification */
+.page-title, .section-title, h1, h2, h3, h4, h5, h6,
+.website-name-right, nav ul li a,
+footer p, .social-media-item p {
+    text-align: inherit;
+    text-justify: inherit;
+}
+
+/* Specific exclusions for centered elements */
+.page-title, footer .container > div {
+    text-align: center;
+}
+
+.content-section {
+   padding: 2rem;
+   border-radius: 8px;
+   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+   margin-bottom: 2rem;
+   background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+ }
         /* About Page Specific */
         .mission-vision-goals {
             display: grid;
@@ -372,8 +417,7 @@ nav ul li {
             padding-left: 1.5rem;
             margin-top: 1rem;
         }
-
-        /* Contact Page Specific */
+/* Contact Page Specific */
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -716,7 +760,7 @@ footer .social-link:hover {
     </style>
 </head>
 <body>
-    <header>
+<header>
     <div class="container">
         <div class="header-content">
             <!-- Website name on right -->
@@ -761,10 +805,10 @@ footer .social-link:hover {
                                 
                                 <!-- Slide 2 -->
                                 <div class="slide" style="min-width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                                    <img src="girlshot3.jpg" alt="Training Session" style="width: 100%; height: 100%; object-fit: cover;">
+                                    <img src="logo1.jpg" alt="Logo Club" style="width: 100%; height: 100%; object-fit: cover;">
                                 </div>
                             </div>
-                            
+
                             <!-- Navigation Buttons -->
                             <button class="slider-btn prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(102, 2, 31, 0.8); color: white; border: none; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; font-size: 1rem; z-index: 10;">
                                 &#10094;
@@ -784,7 +828,7 @@ footer .social-link:hover {
                         <!-- Manual navigation buttons below slider -->
                         <div style="display: flex; justify-content: center; gap: 0.8rem; margin-top: 0.8rem; flex-wrap: wrap;">
                             <button class="manual-btn active" data-slide="0" style="padding: 6px 12px; background-color: #66021F; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.9rem;">Shooting Range</button>
-                            <button class="manual-btn" data-slide="1" style="padding: 6px 12px; background-color: #66021F; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.9rem;">Training Session</button>
+                            <button class="manual-btn" data-slide="1" style="padding: 6px 12px; background-color: #66021F; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.9rem;">Logo Club</button>
                         </div>
                     </div>
                     
@@ -945,7 +989,7 @@ footer .social-link:hover {
                 <h2 class="section-title">Gallery</h2>
                 
                 <div class="gallery-grid">
-                    <div class= url('gallery1.jpg')>
+                    <div class="gallery1.jpg">
                     <img src="gallery1.jpg" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="gallery2.jpg">
@@ -985,8 +1029,7 @@ footer .social-link:hover {
                 </div>
             </div>
         </section>
-
-        <!-- Facilities Section -->
+<!-- Facilities Section -->
         <section id="facilities" class="page-section">
             <h1 class="page-title">Our Facilities</h1>
             
@@ -1153,8 +1196,7 @@ footer .social-link:hover {
 <!-- Contact Section -->
 <section id="contact" class="page-section">
     <h1 class="page-title">Contact Us</h1>
-    
-    <div class="contact-container">
+<div class="contact-container">
         <div class="contact-info" style="flex: 1; min-width: 300px;">
             <h2 class="section-title">Club Information</h2>
             
@@ -1286,7 +1328,7 @@ footer .social-link:hover {
 </section>
 </main>
 <footer>
-    <div class="container">
+<div class="container">
         <!-- Social Media Logos - White Only -->
         <div style="margin-bottom: 1.5rem;">
             <div class="social-links" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
@@ -1322,8 +1364,7 @@ footer .social-link:hover {
                 </a>
             </div>
         </div>
-        
-        <!-- Content from ss1.jpg - EXACT TEXT with adjusted font sizes -->
+   <!-- Content from ss1.jpg - EXACT TEXT with adjusted font sizes -->
         <div style="text-align: center; color: white; line-height: 1.6;">
             <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
                 Elite Ladies Shooting Club © 2025. All Rights Reserved.
@@ -1427,8 +1468,7 @@ footer .social-link:hover {
                     }
                 });
             }
-            
-            // Next slide
+// Next slide
             function nextSlide() {
                 currentSlide = (currentSlide + 1) % totalSlides;
                 updateSlider();
@@ -1459,8 +1499,8 @@ footer .social-link:hover {
             manualBtns.forEach((btn, index) => {
                 btn.addEventListener('click', () => goToSlide(index));
             });
-            
-            // Auto slide every 5 seconds
+
+               // Auto slide every 5 seconds
             let slideInterval = setInterval(nextSlide, 5000);
             
             // Pause auto-slide on hover
@@ -1477,5 +1517,4 @@ footer .social-link:hover {
         });
     </script>
 </body>
-</html>
-
+</html>                   
